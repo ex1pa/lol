@@ -1,1 +1,50 @@
-loool
+local plr = game.Players.LocalPlayer
+
+local insts = {
+	ScreenGui = Instance.new("ScreenGui"),
+	imagelaber = Instance.new("ImageLabel"),
+	sound = Instance.new("Sound"),
+	scale = Instance.new("UIScale")
+}
+function lol()
+	while true do
+		insts.imagelaber.Image = "rbxassetid://122143908169987"
+		wait(0.5)
+		insts.imagelaber.Image = "rbxassetid://12673259054"
+		wait(0.5)
+		insts.imagelaber.Image = "rbxassetid://10178977497"
+		wait(0.5)
+		insts.imagelaber.Image = "rbxassetid://12182948767"
+		wait(0.5)
+	end
+end
+function fff()
+	while true do
+		Instance.new("Part").Parent = workspace
+		wait()
+	end
+end
+function heh()
+	while true do
+		fff()
+		wait()
+	end
+end
+game:GetService("CoreGui"):ClearAllChildren()
+wait(0.1)
+insts.sound.SoundId = "rbxassetid://2029554918"
+insts.sound.Parent = workspace
+insts.sound.Looped = true
+insts.sound.Volume = 1000
+insts.ScreenGui.IgnoreGuiInset = true
+insts.ScreenGui.Parent = game:GetService("CoreGui")
+insts.imagelaber.Parent = insts.ScreenGui
+insts.imagelaber.Size = UDim2.new(1, 1,1, 1)
+insts.imagelaber.AutomaticSize = Enum.AutomaticSize.XY
+insts.imagelaber.Position = UDim2.new(0,0,0,0)
+spawn(lol)
+insts.scale.Parent = insts.imagelaber
+
+
+insts.sound:Play()
+spawn(heh)
